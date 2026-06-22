@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 14:40:33 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/22 11:46:53 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/06/22 14:56:39 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ template <typename T> void iter(T* array, const std::size_t len, void (*f)(T&))
 	for (std::size_t i = 0; i < len; i++)
 	{
 		f(array[i]);
-		std::cout << array[i];
+		std::cout << array[i] << ' ';
 	}
-	std::endl;
+	std::cout << std::endl;
 }
 
 template <typename T> void iter(const T* array, const std::size_t len, void (*f)(const T&))
@@ -28,16 +28,17 @@ template <typename T> void iter(const T* array, const std::size_t len, void (*f)
 	for (std::size_t i = 0; i < len; i++)
 	{
 		f(array[i]);
+		std::cout << ' ';
 	}
-	std::endl;
+	std::cout << std::endl;
 }
 
-template <typename T> const void printArray(T element)
+template <typename T> void printArray(const T& element)
 {
 	std::cout << element;
 }
 
-template <typename T> void increment(T element)
+template <typename T> void increment(T& element)
 {
 	element++;
 }

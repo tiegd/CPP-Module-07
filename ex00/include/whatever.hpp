@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 13:35:01 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/19 11:45:06 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/06/23 14:25:12 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ template <typename T> void swap(T &a, T &b)
 	tmp = a;
 	a = b;
 	b = tmp;
-	// return ();
 }

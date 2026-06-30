@@ -1,4 +1,4 @@
-NAME = base
+NAME = array
 
 CXX = c++
 

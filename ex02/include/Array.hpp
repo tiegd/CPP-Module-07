@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:21 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/23 16:06:05 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:39:05 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 template <typename T>
 class Array
 {
-	public:
-		T*	_array;
 	private:
+		T*	_array;
+	public:
 		Array();
 		Array(unsigned int n);
 		Array(const Array &obj);
@@ -31,5 +31,7 @@ class Array
 		size_t	size();
 		T &operator[](int);
 };
+
+#include "Array.tpp"
 
 #endif

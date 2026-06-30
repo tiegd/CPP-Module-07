@@ -6,22 +6,20 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:33 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/23 16:06:31 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:46:37 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Array.hpp"
 
 template <typename T>
 Array<T>::Array()
 {
-	_array = new T*;
+	_array = new T;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-	_array = new T[n];
+	_array = new T[n]();
 }
 
 template <typename T>
@@ -57,7 +55,7 @@ size_t Array<T>::size()
 template <typename T>
 T& Array<T>::operator[](int i)
 {
-	if (!_array[i])
+	if (i > size())
 		throw std::exception();
 	return (_array[i]);
 }

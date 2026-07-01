@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 14:40:29 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/22 14:57:53 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/07/01 15:54:04 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int main()
 	iter(intArray, 5, increment<int>);
 	iter(intConstArray, 5, printArray<int>);
 	iter(doubleArray, 3, increment<double>);
+	return (0);
 }

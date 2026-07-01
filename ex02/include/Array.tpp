@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:33 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/06/30 15:46:37 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/07/01 13:57:20 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,42 +20,47 @@ template <typename T>
 Array<T>::Array(unsigned int n)
 {
 	_array = new T[n]();
+	_len = n;
 }
 
 template <typename T>
 Array<T>::Array(const Array& obj)
 {
-	_array = obj._array;
+	_len = obj.size();
+	_array = new T[_len]();
+	for (size_t i = 0; i < _len; i++)
+		_array[i] = obj._array[i];
 }
 
 template <typename T>
 Array<T>& Array<T>::operator=(const Array<T>& obj)
 {
 	if (this != &obj)
-		_array = obj._array;
+	{
+		_len = obj.size();
+		_array = new T[_len]();
+		for (size_t i = 0; i < _len; i++)
+			_array[i] = obj._array[i];
+	}
 	return (*this);
 }
 
 template <typename T>
 Array<T>::~Array()
 {
-	delete _array;
+	delete[] _array;
 }
 
 template <typename T>
-size_t Array<T>::size()
+size_t Array<T>::size() const
 {
-	size_t	i = 0;
-	
-	while (_array[i])
-		i++;
-	return (i);
+	return (_len);
 }
 
 template <typename T>
-T& Array<T>::operator[](int i)
+T& Array<T>::operator[](size_t i)
 {
-	if (i > size())
+	if (i >= size() || i < 0)
 		throw std::exception();
 	return (_array[i]);
 }

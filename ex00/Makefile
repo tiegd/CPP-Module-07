@@ -1,4 +1,4 @@
-NAME = base
+NAME =  whatever
 
 CXX = c++
 

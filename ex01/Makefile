@@ -1,4 +1,4 @@
-NAME = base
+NAME = iter
 
 CXX = c++
 

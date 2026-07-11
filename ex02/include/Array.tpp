@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:33 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/07/11 10:36:33 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/07/11 10:49:57 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ void Array<T>::print() const
 		if (i < _len - 1)
 			std::cout << ", ";
 	}
-	std::cout << "]";
+	std::cout << " ]";
 	std::cout << std::endl;
 }

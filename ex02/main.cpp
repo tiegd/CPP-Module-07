@@ -4,6 +4,8 @@
 #define MAX_VAL 5
 int main(int, char**)
 {
+/*------------------int------------------*/
+
 	Array<int> numbers(MAX_VAL);
 	int* mirror = new int[MAX_VAL];
 	srand(time(NULL));
@@ -52,17 +54,31 @@ int main(int, char**)
 	{
 		numbers[i] = rand();
 	}
+	std::cout << std::endl;
+	delete [] mirror;
 
-	Array<std::string> str(MAX_VAL);
-	std::string src[MAX_VAL] = {"Home Work", "Discovery", "Human After All", "Tron", "RAM"};
+/*------------------string------------------*/
 
-	for (int i = 0; i < MAX_VAL; i++)
+	Array<std::string> str(4);
+	std::string src[4] = {"Home Work", "Discovery", "Human After All", "RAM"};
+
+	for (int i = 0; i < 4; i++)
 		str[i] = src[i];
 	std::cout << "str.size = " << str.size() << std::endl;
 	std::cout << "content = ";
 	str.print();
+	std::cout << std::endl;
 
-	delete [] mirror;
+/*------------------double------------------*/
+
+	Array<double>	db(7);
+	double			src_db[7] = {5.44, 6, 7.61, 56.01, 741.963, 55.6, -963.0};
+	for (int i = 0; i < 7; i++)
+		db[i] = src_db[i];
+	std::cout << "db.size = " << db.size() << std::endl;
+	std::cout << "content =";
+	db.print();
+	std::cout << std::endl;
 
 	return 0;
 }

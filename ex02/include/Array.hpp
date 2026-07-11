@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:21 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/07/01 13:51:53 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/07/11 10:14:10 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Array
 		
 		size_t	size() const;
 		T &operator[](size_t);
+
+		void	print() const;
 };
 
 #include "Array.tpp"

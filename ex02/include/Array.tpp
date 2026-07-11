@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:10:33 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/07/01 13:57:20 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/07/11 10:36:33 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,16 @@ T& Array<T>::operator[](size_t i)
 	return (_array[i]);
 }
 
+template <typename T>
+void Array<T>::print() const
+{
+	std::cout << "[ ";
+	for (size_t i = 0; i < _len; i++)
+	{
+		std::cout << _array[i];
+		if (i < _len - 1)
+			std::cout << ", ";
+	}
+	std::cout << "]";
+	std::cout << std::endl;
+}
